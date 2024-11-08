@@ -33,3 +33,39 @@ that is an obtuse triangle
 
 
 """
+
+import math
+
+a = float(input("Enter the first side"))
+b = float(input("Enter the second side"))
+c = float(input("Enter the third side"))
+
+v1 = min(a,b,c)
+v3 = max(a,b,c)
+v2 = (a + b + c) - (v1+v3)
+
+righttri = 
+expected = (v1**2 + v2**2)
+lowLimit = (expected * 0.98)
+upLimit = (expected / 0.98)
+print(lowLimit, upLimit)
+
+if (lowLimit > v3 > upLimit):
+    print("that is a right triangle")
+
+if (v1**2 + v2**2 < v3**2):
+    print("that is an obtuse triangle")
+
+if (v1**2 + v2**2 > v3**2):
+    print("that is an acute triangle")
+
+# actual short side
+# actual long side
+# actual hypotenuse
+
+# find expected hypotenuse
+# find lower limit for expected hypotenuse
+# find upper limit
+
+#if lower < actual < upper
+#right

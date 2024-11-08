@@ -27,10 +27,9 @@
 userName = str(input("Enter your username"))
 userName.strip( )
 
-passWord = str(input("Enter your password"))
-passWord.strip( )
-
 if userName == ("admin"):
+    passWord = str(input("Enter your password"))
+    passWord.strip( )
     if passWord == ("12345password"):
         print("Access Granted")
 
@@ -39,16 +38,3 @@ if userName == ("admin"):
 
 else:
     print("Invalid User")
-
-"""
-ask for username
-ask for password
-
-if username is correct:
-    if password is correct
-        both were correct
-    else
-        password is incorrect but username was correct
-else
-    if username was incorrect and the password was not even checked
-"""
