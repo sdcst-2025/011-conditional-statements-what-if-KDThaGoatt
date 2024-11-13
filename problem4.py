@@ -44,19 +44,17 @@ v1 = min(a,b,c)
 v3 = max(a,b,c)
 v2 = (a + b + c) - (v1+v3)
 
-righttri = 
-expected = (v1**2 + v2**2)
+expected = math.sqrt(v1**2 + v2**2)
 lowLimit = (expected * 0.98)
 upLimit = (expected / 0.98)
-print(lowLimit, upLimit)
 
-if (lowLimit > v3 > upLimit):
+if (lowLimit < v3 < upLimit):
     print("that is a right triangle")
 
-if (v1**2 + v2**2 < v3**2):
+elif (v1**2 + v2**2 < v3**2):
     print("that is an obtuse triangle")
 
-if (v1**2 + v2**2 > v3**2):
+else:
     print("that is an acute triangle")
 
 # actual short side
